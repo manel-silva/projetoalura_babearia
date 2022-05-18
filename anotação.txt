@@ -1,0 +1,202 @@
+Nesta aula, aprendemos:
+
+********** /* COMENTARIOS NO CSS */ **********
+
+- Introdução ao HTML e às suas tags
+
+    * Como definir o título e os parágrafos de um texto -> tags <h1> e <p>
+    * Informações do texto, deixando-as em negrito -> tag <strong>
+    * Informações do texto, deixando-as em itálico -> tag <em>
+
+- Definir a estrutura básica do HTML
+
+    * A tag DOCTYPE, definimos qual versão do HTML estamos utilizando
+    * O conteúdo a ser renderizado no navegador fica dentro da tag <html>
+    obs: podemos definir a linguagem da página, através da propriedade lang = exemplo <html lang="pt-br">
+    * As informações para o navegador, através da tag <meta> e da propriedade charset
+    * Definir o título de uma página, através da tag <title>
+
+<!-- Divisão estrutural: head (inf para o navegador) e body (inf para exibir na página) -->
+    * Separar as informações que estão sendo passadas para o navegador, utilizando a tag <head>
+    * Separar o conteúdo da página, utilizando a tag <body>
+
+- Apresentação dos textos (CSS) = tag <style></style>
+
+    * No alinhamento deles (text-align)
+    * No tamanho da fonte (font-size) ***** font-size: 2em; /*duas vezes o tamanho da fonte base */
+    * Na cor de fundo (background)
+    * Na cor do texto (color)
+    * Ajustar a altura do elemento (height)
+    * Ajustar a largura do elemento (width)
+    * Ajustar o espaçamento interno do elemento (padding)
+    * Ajustar o espaçamento externo do elemento (margin) *** /*cima direita baixo esquerda*/
+
+- A trabalhar com listas não-ordenadas <ul> e listas ordenadas
+
+    * Para cada um dos itens da lista -> tag <li>
+
+obs: O conceito das classes no CSS, elas servem para marcar itens, que são repetíveis
+
+- Como referenciar uma classe no CSS
+    * Divisões de conteúdo -> tag <div>
+
+- Comportamentos:
+
+*inline : Um elemento inline não me deixa alterar, por exemplo, o espaçamento externo e interno dele.
+
+*block : comportamento de uma tag ocupar a largura inteira da página. Ele bloqueia o conteúdo daquela linha.
+
+*existe uma terceira característica, quando o elemento possui as duas condições. Ele é inline e block ao mesmo tempo. 
+Ou seja, ele bloqueia uma largura, mas essa largura é fixa. Sou eu que dou o tamanho. E ele me deixa também mexer na
+largura e nos espaçamentos interno e externo.
+
+Página de Produtos - Novo Arquivo
+
+criar links para outras páginas -> tag <a>
+    ex: <a href="http:www.google.com.br">Home</a>
+
+Como transformar o texto para ter todas as letras maiúsculas --> text-transform: uppercase
+Como deixar o texto em negrito com CSS ------------------------> font-weight: bold
+Como remover a decoração do texto -----------------------------> text-decoration: none
+
+Como remover os estilos que o navegador cria automaticamente --> <link rel="stylesheet" href="reset.css"> (arquivo externo)
+
+Como funciona os posicionamentos dos elementos:
+    * static:
+        Sempre posicionado à esquerda no meu site, o ponto inicial dela é esse aqui. 
+        Esse ponto incial é chamado de posição estática.
+    * relative:
+        Mudar o ponto inicial dele, para isso precisa mudar a posição dele para relativa.
+        Ou seja, ele vai olhar o ponto inicial, mas vai ter uma nova posição que é relativa àquela posição inicial.
+    * absolute:
+        É um posicionamento absoluto em relação a outra coisa.
+        por exemplo, em relação à página toda, em relação ao cabeçalho e para usar o posicionamento absoluto
+
+* A tag main, para o conteúdo principal da nossa página
+* A tag footer, para o rodapé da nossa página
+* A tabela Unicode - caracteres especiais e emojis padronizados
+
+*Bordas :
+    border: 2px solid black; (tamanho, tipo e cor) ou border-width, border-style, border-color
+    border-radius: 10px; (curvatura da borda para todos os cantos)
+    border-radius: 10px 20px 30px 40px; (curvatura da borda para cada canto)
+
+Algumas pseudo-classes CSS
+    * hover, quando o usuário passa o cursor sobre o elemento
+    * active, quando um elemento está sendo ativado pelo usuário
+
+* A criar um formulário HTML:
+    - A tag que o representa é a <form>
+    - A tag <input>, para a entrada de dados do usuário
+    - A tag <label>, criar uma etiqueta para o input
+
+    obs: A conectar um input com o seu label => for e id
+
+    ex: <label for="nomesobrenome">Nome e sobrenome:</label>
+        <input type="text" id="nomesobrenome">
+
+    Colocamos um id para o input e associamos esse id ao atributo for do label
+    
+    - Alguns tipos de input, como text e submit
+
+    Atenção: O label possui o display inline e o input possui display inline-block
+
+    - O textarea, para entradas de texto de mais de uma linha
+
+    - O input do tipo radio
+        Como agrupar vários input do tipo radio, impedindo que mais de um input seja selecionado - define um name igual pra todos
+
+    - O input do tipo checkbox
+
+    - A hierarquia no CSS: ID = 100 > ClASS = 10 > TAG = 1    
+
+    - O select, que é seletor, um campo de seleção de um item, e o option, que representa cada opção do seletor
+
+    - Alguns tipos de inputs para celular: email, tel, number, password, date, datetime, month e search
+
+    - Como não permitir que um campo não seja preenchido, através do atributo required
+
+    - Como exibir uma sugestão de preenchimento para os campos, através do atributo placeholder
+
+    - Como deixar uma opção marcada por padrão nos nossos input radio e checkbox, através do atributo checked
+
+    - Como estruturar melhor o nosso código com fieldset e legend
+
+    - Como adicionar uma alternativa à imagem, descrevendo-a, com o atributo alt
+
+* Como estilizar o botão de envio de formulário
+    - A realizar transições nos nossos elementos, com a propriedade CSS transition
+    - A modificar o estilo do ponteiro do mouse, quando passar por cima de determinado elemento, através da propriedade CSS cursor
+    - A realizar transformações nos nossos elementos, como aumentar proporcionalmente a escala de determinado elemento ou rotacioná-lo, através da propriedade CSS transform
+        - transform: scale(1.2) => +20%
+        - transform: rotate(45) => rotacionar 45º
+
+* A criar uma tabela HTML
+    A tag table, que representa a tabela
+    A tag tr, que representa a linha da tabela
+    A tag td, que representa a célula da tabela
+    A tag thead, que representa o cabeçalho da tabela
+    A tag tbody, que representa o corpo da tabela
+    A tag th, que representa a célula do cabeçalho da tabela
+    A tag tfoot, que representa o rodapé da tabela
+
+    obs: <td colspan = "x"> -> mesclagem das colunas da tabela
+         <td rowspan = "x"> -> mesclagem das linhas da tabela
+    
+    - Só devemos usar <section> quando o bloco for semântico
+
+    - Como funciona a flutuação dos elementos e como modificá-la, com a propriedade float do CSS
+    - Como limpar o float, com a propriedade clear do CSS
+    
+    https://fonts.google.com/ --> FONTES WEB
+
+* Novas pseudo-classes
+    :hover, :active, :visited, :required
+
+    :first-child   :   negritar o primeiro item da lista.
+    :last-child    :   marcará o último item da lista.
+
+    possibilidade de selecionar qualquer elemento da lista por via do nth-child(), 
+    que receberá o número que quisermos. 
+    exemplo 
+        n=4 -> :nth-child(4) : se refere ao quarto elemento da lista. 
+    
+    Podemos ainda utilizar valores como 2n com o nth-child() -> :nth-child(2n) : marcamos todos os elementos pares da lista
+
+* Como aplicar um background gradiente na página : degradê linear(linear-gradient) e radial(radial-gradient)
+ex:
+    background: linear-gradient( orange, blue, red, black);
+    background: linear-gradient(45deg, orange 50%, blue, red, black);
+
+
+* Pseudo-elementos
+exemplo
+    .titulo-principal:first-letter{} : Primeira letra classes titulo
+exemplo
+    p:first-line {} : primeira linha  
+
+pseudo-elementos do CSS: after e before. Esses dois elementos criam espaço para que o CSS atue antes ou depois de um determinado conteúdo.
+
+exemplo
+    .titulo-principal:before {
+        content: "[";
+    }
+
+* Seletores avançados do CSS:
+
+    - Seletor >, para acessar os filhos de determinado elemento.  ---------------->  main > p { background: red; }
+
+    - Seletor +, para acessar o primeiro irmão de determinado elemento. ---------->  img + p { background: blue; }
+
+    - Seletor ~, para acessar todos os irmãos de determinado elemento. ----------->  img ~ p { background: yellow; }
+
+    - Seletor not, para acessar os elementos, exceto algum. ----------------------> .principal p:not(#missao) { background: orange; }
+
+* Como manipular a opacidade dos elementos, com a propriedade CSS opacity:  1 imagem limpa ... 0 imagem opaca
+
+* Como adicionar um sombreamento em volta dos elementos, com a propriedade CSS box-shadow
+
+    box-shadow: X Y #COR; 
+    box-shadow: (X) (Y) (borda transição) (intensidade da borda) Cor, (-X) (-Y) Cor;
+
+    text-shadow: adicionar um sombreamento em textos
